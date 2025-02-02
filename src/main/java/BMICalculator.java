@@ -56,9 +56,10 @@ public class BMICalculator {
      * Methode calculate BMI:
      */
     public double calculateBMI() {
-        double heightInMeters = bodyHeight / 100.0;
+        double heightInMeters = (double) bodyHeight / 100;
         double bmi = bodyWeight / (heightInMeters * heightInMeters);
-        return round(bmi);
+        double round = Math.round(bmi * 100.0) / 100.0;
+        return round;
     }
 
 
